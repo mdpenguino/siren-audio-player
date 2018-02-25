@@ -16,6 +16,37 @@ const {app, BrowserWindow} = require('electron')
       fullscreenable: false,
     })
 
+
+    win.once('ready-to-show', () => {
+      win.maximize()
+      win.show()
+    })
+
+
+    //create's a BrowserWindow
+
+    // and load the index.html of the app
+    win.loadURL(url.format({
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
+    // load the splash.html of the app for the splashscreen
+
+
+    // Open the DevTools
+    win.webContents.openDevTools()
+
+    // Emitted when the window is closed
+    win.on('closed', () => {
+      // Dereference the window object, usually you would store windows
+      // in an array if your app supports multi windows, this is the time
+      // when you should delete the corresponding element.
+      win = null
+    })
+
+  }
+
   function createSplash () {
     splash = new BrowserWindow({
       show: false,
@@ -29,36 +60,14 @@ const {app, BrowserWindow} = require('electron')
       maximizable:  false,
       frame: false,
     })
-  }
-    win.once('ready-to-show', () => {
-      win.maximize()
-      win.show()
+    splash.once('ready-to-show', () => {
+      splash.show()
     })
-    //create's a BrowserWindow
-
-    // and load the index.html of the app
-    win.loadURL(url.format({
-      pathname: path.join(__dirname, 'index.html'),
-      protocol: 'file:',
-      slashes: true
-    }))
-    // load the splash.html of the app for the splashscreen
     splash.loadURL(url.format({
       pathname: path.join(__dirname, 'splash.html'),
       protocol: 'file:',
       slashes: true
     }))
-
-    // Open the DevTools
-    win.webContents.openDevTools()
-
-    // Emitted when the window is closed
-    win.on('closed', () => {
-      // Dereference the window object, usually you would store windows
-      // in an array if your app supports multi windows, this is the time
-      // when you should delete the corresponding element.
-      win = null
-    })
     splash.on('closed', () => {
       splash = null
       console.log('closed the splashscreen')
