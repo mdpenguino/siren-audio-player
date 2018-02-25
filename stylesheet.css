@@ -10,12 +10,14 @@ P {
   font-size: 15px;
 }
 
-.splash.h1 {
+.splashheader {
   text-align: center;
+  user-select: none;
 }
 
-.splash.p {
+.splashtext {
   font-family: verdana;
   font-size: 15px;
   text-align: center;
+  user-select: none;
 }
