@@ -9,3 +9,13 @@ P {
   font-family: verdana;
   font-size: 15px;
 }
+
+.splash.h1 {
+  text-align: center;
+}
+
+.splash.p {
+  font-family: verdana;
+  font-size: 15px;
+  text-align: center;
+}
