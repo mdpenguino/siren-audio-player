@@ -15,12 +15,10 @@ const {app, BrowserWindow} = require('electron')
       fullscreenable: false,
     })
 
-
     win.once('ready-to-show', () => {
       win.maximize()
       win.show()
     })
-
 
     //create's a BrowserWindow
 
@@ -30,8 +28,6 @@ const {app, BrowserWindow} = require('electron')
       protocol: 'file:',
       slashes: true
     }))
-    // load the splash.html of the app for the splashscreen
-
 
     // Open the DevTools
     win.webContents.openDevTools()
@@ -43,7 +39,6 @@ const {app, BrowserWindow} = require('electron')
       // when you should delete the corresponding element.
       win = null
     })
-
   }
 
   function createSplash () {

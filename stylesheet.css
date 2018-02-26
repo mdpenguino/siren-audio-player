@@ -11,13 +11,15 @@ P {
 }
 
 .splashheader {
-  text-align: center;
-  user-select: none;
 }
 
 .splashtext {
   font-family: verdana;
   font-size: 15px;
+}
+
+.splashbody {
   text-align: center;
   user-select: none;
+  -webkit-app-region: drag;
 }
