@@ -53,6 +53,7 @@ const {app, BrowserWindow} = require('electron')
       fullscreenable: false,
       maximizable:  false,
       frame: false,
+      transparent: true,
     })
     splash.once('ready-to-show', () => {
       splash.show()
