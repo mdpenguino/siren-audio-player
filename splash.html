@@ -89,8 +89,8 @@
             'Now Loading',
             'Who Touched My Spaghet!?',
             'Squealer Desu',
-            'Kanashii, Kanashii, Kanashii, Kanashii~',
-            'THere Are No Busses In Gensokyo',
+            'Kanashii, Kanashii~',
+            'There Are No Busses In Gensokyo',
             '',
             '',
             '',
@@ -121,9 +121,9 @@
           let counter = 0
           const next = () => {
             fx.setText(phrases[counter]).then(() => {
-              setTimeout(next, 800)
+              setTimeout(next, 4000)
             })
-            counter = (Math.floor(Math.random() * 6) + 1 ) % phrases.length
+            counter = (Math.floor(Math.random() * 6) + 1 )
           }
           next()
         </script>
