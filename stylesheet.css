@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Rpbptp:300,400');
 
 body {
 }
@@ -36,5 +36,10 @@ P {
   transform: translate(-50%, -50%);
   font-size 30px;
   color #FAFAFA;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dud {
+  color: #757575;
+  font-family: 'Robot', sans-serif;
 }
