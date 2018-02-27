@@ -28,7 +28,7 @@
           class TextScramble {
             constructor(el) {
               this.el = el
-              this.chars = '@!<>\\/[]{}=^?#%&£$~'
+              this.chars = '@!<>\\/[]{}=^?#%&£$'
               this.update = this.update.bind(this)
             }
             setText(newText) {
@@ -86,28 +86,15 @@
 
           const phrases = [
             'Initializing',
-            'Now Loading',
+            'Now Loading!',
             'Who Touched My Spaghet!?',
             'Squealer Desu',
             'Kanashii, Kanashii~',
-            'There Are No Busses In Gensokyo',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
+            'There Are No Buses In Gensokyo',
+            'Quick, Call The Police!',
+            'Now With 100% Less Screaming!',
+            'Gas, Gas, Gas',
+            'Nairobi! Nairobi!',
             '',
             '',
             '',
@@ -123,7 +110,7 @@
             fx.setText(phrases[counter]).then(() => {
               setTimeout(next, 4000)
             })
-            counter = (Math.floor(Math.random() * 6) + 1 )
+            counter = (Math.floor(Math.random() * 10) + 1 )
           }
           next()
         </script>
