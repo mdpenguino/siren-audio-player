@@ -14,6 +14,9 @@
     </head>
     <body class="splashbody">
       <h1 class="splashheader">Siren</h1>
+      <br/>
+      <br/>
+      <br/>
         <div class="container">
           <div class="text">
           </div>
@@ -26,7 +29,7 @@
           class TextScramble {
             constructor(el) {
               this.el = el
-              this.chars = '@!<>-_\\/[]{}—=+*^?#________'
+              this.chars = '@!<>\\/[]{}=^?#%&£$~'
               this.update = this.update.bind(this)
             }
             setText(newText) {
@@ -83,6 +86,7 @@
 
           const phrases = [
             'Initializing',
+            'Now Loading',
           ]
 
           const el = document.querySelector('.text')

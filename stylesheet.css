@@ -23,17 +23,18 @@ P {
 }
 
 .container {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  height: 10em;
+  position: relative
 }
 
 .text {
-  font-weight 100;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   font-size 30px;
   color #FAFAFA;
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
 }
