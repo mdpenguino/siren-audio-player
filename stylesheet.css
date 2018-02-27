@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rpbptp:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 body {
 }
@@ -20,11 +20,13 @@ P {
   text-align: center;
   user-select: none;
   -webkit-app-region: drag;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   height: 10em;
-  position: relative
+  position: relative;
+  letter-spacing: 2px;
 }
 
 .text {
@@ -34,12 +36,9 @@ P {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  font-size 30px;
-  color #FAFAFA;
-  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 }
 
 .dud {
   color: #757575;
-  font-family: 'Robot', sans-serif;
 }
