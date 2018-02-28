@@ -3,6 +3,6 @@
     "productName": "Siren",
     "description": "An album art focused audio player",
     "version": "0.1.0",
-    "main": "main.js",
+    "main": "src/main.js",
     "author": "mdpenguino"
   }

@@ -1,0 +1,118 @@
+<!doctype html>
+  <html>
+    <head>
+      <style ="text/css">
+      html {
+        width: 100%;
+        height: 100%;
+        background: url('assets/background.png') center center no-repeat;
+        -webkit-app-region: drag;
+      }
+      </style>
+      <meta charset="utf-8">
+      <link href="stylesheet.css" type="text/css" rel="stylesheet">
+    </head>
+    <body class="splashbody">
+      <h1 class="splashheader">Siren</h1>
+      <br/>
+      <br/>
+      <br/>
+        <div class="container">
+          <div class="text">
+          </div>
+        </div>
+        <script>
+        // ——————————————————————————————————————————————————
+        // TextScramble
+        // ——————————————————————————————————————————————————
+          class TextScramble {
+            constructor(el) {
+              this.el = el
+              this.chars = '@!<>\\/[]{}=^?#%&£$'
+              this.update = this.update.bind(this)
+            }
+            setText(newText) {
+              const oldText = this.el.innerText
+              const length = Math.max(oldText.length, newText.length)
+              const promise = new Promise((resolve) => this.resolve = resolve)
+              this.queue = []
+              for (let i = 0; i < length; i++) {
+                const from = oldText[i] || ''
+                const to = newText[i] || ''
+                const start = Math.floor(Math.random() * 40)
+                const end = start + Math.floor(Math.random() * 40)
+                this.queue.push({ from, to, start, end })
+              }
+              cancelAnimationFrame(this.frameRequest)
+              this.frame = 0
+              this.update()
+              return promise
+            }
+            update() {
+              let output = ''
+              let complete = 0
+              for (let i = 0, n = this.queue.length; i < n; i++) {
+                let { from, to, start, end, char } = this.queue[i]
+                if (this.frame >= end) {
+                  complete++
+                  output += to
+                } else if (this.frame >= start) {
+                  if (!char || Math.random() < 0.28) {
+                    char = this.randomChar()
+                    this.queue[i].char = char
+                  }
+                  output += `<span class="dud">${char}</span>`
+                } else {
+                  output += from
+                }
+              }
+              this.el.innerHTML = output
+              if (complete === this.queue.length) {
+                this.resolve()
+              } else {
+                this.frameRequest = requestAnimationFrame(this.update)
+                this.frame++
+              }
+            }
+            randomChar() {
+              return this.chars[Math.floor(Math.random() * this.chars.length)]
+            }
+          }
+
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+
+          const phrases = [
+            'Initializing',
+            'Now Loading!',
+            'Who Touched My Spaghet!?',
+            'Squealer Desu',
+            'Kanashii, Kanashii~',
+            'There Are No Buses In Gensokyo',
+            'Quick, Call The Police!',
+            'Now With 100% Less Screaming!',
+            'Gas, Gas, Gas',
+            'Nairobi! Nairobi!',
+            'Cash Is For Clowns, Boy!',
+            '',
+            '',
+            '',
+            '',
+          ]
+
+          const el = document.querySelector('.text')
+          const fx = new TextScramble(el)
+
+          let counter = 0
+          const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+              setTimeout(next, 4000)
+            })
+            counter = (Math.floor(Math.random() * 11))
+          }
+          next()
+        </script>
+    </body>
+  </html>
