@@ -18,6 +18,7 @@ const {app, BrowserWindow} = require('electron')
     win.once('ready-to-show', () => {
       win.maximize()
       win.show()
+      splash.destroy()
     })
 
     //create's a BrowserWindow
@@ -56,6 +57,7 @@ const {app, BrowserWindow} = require('electron')
     })
     splash.once('ready-to-show', () => {
       splash.show()
+      console.log('opened the splashscreen')
     })
     splash.loadURL(url.format({
       pathname: path.join(__dirname, 'splash.html'),
@@ -72,8 +74,9 @@ const {app, BrowserWindow} = require('electron')
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
   app.on('ready', () => {
-    createWindow()
     createSplash()
+    createWindow()
+
   })
 
   // Quit when all windows are closed
