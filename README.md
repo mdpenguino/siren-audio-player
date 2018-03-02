@@ -10,5 +10,7 @@ Here's the [Roadmap](https://trello.com/b/3ptpLwwU/siren-music-player)
 - [x] Get spalshscreen to close when main application is ready
 - [ ] Create a delay before the main application is ready for testing purposes
 
+https://github.com/FormidableLabs/image-palette/tree/master/packages/react-image-palette
+
 ## Credits
 - [Photon](http://photonkit.com) by Connor Sears
