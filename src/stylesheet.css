@@ -8,48 +8,10 @@ h1 {
   font-family: 'Montserrat', sans-serif;
 }
 
-P {
+P{
   font-family: verdana;
   font-size: 15px;
   line-height: normal;
-}
-
-ul {
-  padding: 0;
-  width: 100%;
-}
-
-li {
-  display: inline;
-}
-
-a {
-  outline: none;
-  text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-}
-
-li:last-child a {
-  margin-right: 0;
-}
-
-a:link, a:visited, a:focus {
-  background: darkorange;
-}
-
-a:hover {
-  background: #717171;
-}
-
-a:active {
-  background: #717171;
-  color: white;
 }
 
 .splashheader {
@@ -63,7 +25,7 @@ a:active {
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.splashcontainer {
   height: 10em;
   position: relative;
   letter-spacing: 1.5px;
@@ -82,4 +44,30 @@ a:active {
 
 .dud {
   color: #717171;
+}
+
+
+/* PHOTON STUFF */
+
+.pane-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.pane {
+  position: relative;
+  overflow-y: auto;
+  flex: 1;
+  border-left: 1px solid #ddd;
+}
+.pane-sm {
+  max-width: 220px;
+  min-width: 150px;
+}
+.pane-mini {
+  width: 80px;
+  flex: none;
 }
