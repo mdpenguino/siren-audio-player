@@ -5,7 +5,4 @@
     "version": "0.1.0",
     "main": "src/main.js",
     "author": "mdpenguino",
-    "dependencies": {
-        "materialize-css": "^0.100.2"
-    }
 }
