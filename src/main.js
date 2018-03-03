@@ -15,6 +15,13 @@ const {app, BrowserWindow} = require('electron')
       fullscreenable: false,
     })
 
+    // and load the index.html of the app
+    win.loadURL(url.format({
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
+
     win.once('ready-to-show', () => {
       win.maximize()
       win.show()
@@ -22,13 +29,6 @@ const {app, BrowserWindow} = require('electron')
     })
 
     //create's a BrowserWindow
-
-    // and load the index.html of the app
-    win.loadURL(url.format({
-      pathname: path.join(__dirname, 'index.html'),
-      protocol: 'file:',
-      slashes: true
-    }))
 
     // Open the DevTools
     win.webContents.openDevTools()
