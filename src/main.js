@@ -1,9 +1,33 @@
 const {app, BrowserWindow} = require('electron')
   const path = require('path')
   const url = require('url')
+  // Create timestamps for console
+  var log = console.log;
+  console.log = function () {
+      var first_parameter = arguments[0];
+      var other_parameters = Array.prototype.slice.call(arguments, 1);
 
-  // Keep a global reference of the window object, if you don't, the window will
-  // be closed automatically when the JavaScript object is garbage collected.
+      function formatConsoleDate (date) {
+          var hour = date.getHours();
+          var minutes = date.getMinutes();
+          var seconds = date.getSeconds();
+          var milliseconds = date.getMilliseconds();
+
+          return '[' +
+                 ((hour < 10) ? '0' + hour: hour) +
+                 ':' +
+                 ((minutes < 10) ? '0' + minutes: minutes) +
+                 ':' +
+                 ((seconds < 10) ? '0' + seconds: seconds) +
+                 '.' +
+                 ('00' + milliseconds).slice(-3) +
+                 '] ';
+      }
+      log.apply(console, [formatConsoleDate(new Date()) + first_parameter].concat(other_parameters));
+  };
+
+// Keep a global reference of the window object, if you don't, the window will
+// be closed automatically when the JavaScript object is garbage collected.
 
   function createWindow () {
     win = new BrowserWindow({
@@ -72,7 +96,7 @@ const {app, BrowserWindow} = require('electron')
   app.on('ready', () => {
     createSplash()
     createWindow()
-
+    console.log('loaded app')
   })
 
   // Quit when all windows are closed
@@ -81,6 +105,7 @@ const {app, BrowserWindow} = require('electron')
     // to stay active until the user quits explicitly with Cmd + Q
     if (process.platform !== 'darwin') {
       app.quit()
+      console.log('app killed')
     }
   })
 

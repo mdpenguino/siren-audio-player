@@ -15,6 +15,10 @@ P {
   line-height: normal;
 }
 
+.sidebarbutton {
+
+}
+
 .splashheader {
   font-family: 'Montserrat', sans-serif;
 }
@@ -55,6 +59,7 @@ P {
   margin: 1em;
   right: 0px;
   -webkit-app-region: drag;
+  font: Montserrat;
 }
 
 .buttons {
@@ -101,7 +106,7 @@ P {
 .buttons:nth-last-child(1) {
   -webkit-transition-delay: 25ms;
           transition-delay: 25ms;
-  background-color: #333333;
+  background-color: #707070;
   background-size: contain;
   background-image: url(../src/assets/plus.png);
   cursor: context-menu;
@@ -110,21 +115,22 @@ P {
 .buttons:not(:last-child):nth-last-child(2) {
   -webkit-transition-delay: 50ms;
           transition-delay: 20ms;
-  background-color: #333333;
+  background-color: #707070;
   background-size: contain;
 }
 
 .buttons:not(:last-child):nth-last-child(3) {
   -webkit-transition-delay: 75ms;
           transition-delay: 40ms;
-  background-color: #333333;
+  background-color: #707070;
   background-size: contain;
+    background-image: url(../src/assets/note.png);
 }
 
 .buttons:not(:last-child):nth-last-child(4) {
   -webkit-transition-delay: 100ms;
           transition-delay: 60ms;
-  background-color: #333333;
+  background-color: #707070;
   background-size: contain;
 }
 
@@ -167,7 +173,7 @@ P {
 }
 .alternativecolour {
   var()
-  color: gainsboro;
+  color: #707070;
 }
 
 /* PHOTON UI */
@@ -189,6 +195,7 @@ P {
 .pane-sm {
   max-width: 220px;
   min-width: 150px;
+  font-family: Montserrat;
 }
 .pane-mini {
   width: 80px;
