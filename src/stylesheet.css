@@ -46,6 +46,15 @@ P{
   color: #717171;
 }
 
+.backgroundcolour {
+  var()
+}
+.colour {
+  var()
+}
+.alternativecolour {
+  var()
+}
 
 /* PHOTON STUFF */
 
