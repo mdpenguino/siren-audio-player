@@ -46,6 +46,8 @@ P{
   color: #717171;
 }
 
+/* UI Album Art Palette */
+
 .backgroundcolour {
   var()
 }
@@ -56,7 +58,7 @@ P{
   var()
 }
 
-/* PHOTON STUFF */
+/* PHOTON UI */
 
 .pane-group {
   position: absolute;

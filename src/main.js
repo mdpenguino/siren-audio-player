@@ -14,22 +14,18 @@ const {app, BrowserWindow} = require('electron')
       minHeight: 600,
       fullscreenable: false,
     })
-
     // and load the index.html of the app
     win.loadURL(url.format({
       pathname: path.join(__dirname, 'index.html'),
       protocol: 'file:',
       slashes: true
     }))
-
     win.once('ready-to-show', () => {
       win.maximize()
       win.show()
       splash.destroy()
     })
-
-    //create's a BrowserWindow
-
+    // creates a BrowserWindow, destroy's the splashscreen
     // Open the DevTools
     win.webContents.openDevTools()
 
@@ -41,7 +37,7 @@ const {app, BrowserWindow} = require('electron')
       win = null
     })
   }
-
+  // splashscreen initialization code
   function createSplash () {
     splash = new BrowserWindow({
       show: false,
