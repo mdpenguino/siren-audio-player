@@ -2,6 +2,7 @@ const {app, BrowserWindow} = require('electron')
   const path = require('path')
   const url = require('url')
   // Create timestamps for console
+
   var log = console.log;
   console.log = function () {
       var first_parameter = arguments[0];
