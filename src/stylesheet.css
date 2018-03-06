@@ -25,7 +25,8 @@ P {
   }
 
 .headerfade {
-  -webkit-animation: fadeOut 2s
+  -webkit-animation: fadeOut 2s forwards;
+  -webkit-animation-delay: 2.25s;
 }
 
 .splashheader {
