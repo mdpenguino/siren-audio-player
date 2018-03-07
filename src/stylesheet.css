@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&subset=greek');
 
+/* UI Album Art Palette */
+root: {
+  --backgroundcolour:brown;
+  --colour:#000;
+  --alternativecolour:#707070;
+}
+
 body {
-  /*color: #44cc00;*/
-  color: var(--backgroundcolour);
+  color: #44cc00;
 }
 
 h1 {
@@ -170,14 +176,6 @@ P {
   opacity: 1;
 }
 
-
-/* UI Album Art Palette */
-root: {
-  --backgroundcolour:#f6edda;
-  --colour:#000;
-  --alternativecolour:#707070;
-}
-
 /* PHOTON UI */
 
 .pane-group {
@@ -241,7 +239,7 @@ root: {
 }
 
 .sidebar {
-  background-color: #f5f5f4;
+  background-color: var(--background-colour);
 }
 
 /*PHOTON LIST GROUP */
