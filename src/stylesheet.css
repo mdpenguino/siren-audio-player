@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&subset=greek');
 
 body {
-  color: #44cc00;
+  /*color: #44cc00;*/
+  color: var(--backgroundcolour);
 }
 
 h1 {
@@ -171,23 +172,10 @@ P {
 
 
 /* UI Album Art Palette */
-
---backgroundcolour {
-  var()
-  /*color: #fff;*/
-  color: #f6edda
-}
-
-/* Text Colour */
---colour {
-  var()
-  color: #000;
-}
-
-/* Used for anything else */
---alternativecolour {
-  var()
-  color: #707070;
+root: {
+  --backgroundcolour:#f6edda;
+  --colour:#000;
+  --alternativecolour:#707070;
 }
 
 /* PHOTON UI */
