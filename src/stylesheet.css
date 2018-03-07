@@ -3,12 +3,12 @@
 /* UI Album Art Palette */
 root: {
   --backgroundcolour:brown;
-  --colour:#000;
-  --alternativecolour:#707070;
+  --colour:brown;
+  --alternativecolour:brown;
 }
 
 body {
-  color: #44cc00;
+  background-color: var(--backgroundcolour);
 }
 
 h1 {
