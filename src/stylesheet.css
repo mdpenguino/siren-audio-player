@@ -22,6 +22,17 @@ P {
   line-height: normal;
 }
 
+a:not([draggable=true]), img:not([draggable=true]) {
+    -webkit-user-drag: none;
+    user-drag: none; /* Technically not supported in Electron yet */
+}
+a[href^="http://"],
+a[href^="https://"],
+a[href^="ftp://"] {
+    -webkit-user-drag: auto;
+    user-drag: auto; /* Technically not supported in Electron yet */
+}
+
 @keyframes fadeOut {
     from {
       opacity: 1;
@@ -76,6 +87,7 @@ P {
   margin: 1em;
   right: 0px;
   -webkit-app-region: drag;
+  -webkit-user-select: none;
   font-family: 'Montserrat';
 }
 
@@ -196,6 +208,8 @@ P {
 .pane-sm {
   max-width: 220px;
   min-width: 150px;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
 }
 .pane-mini {
   width: 80px;
@@ -215,6 +229,7 @@ P {
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: 'Montserrat', sans-serif;
+  cursor: context-menu;  
 }
 .nav-group-item:active, .nav-group-item.active {
   background-color: #dcdfe1;
