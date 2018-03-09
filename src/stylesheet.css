@@ -2,13 +2,12 @@
 
 /* UI Album Art Palette */
 root: {
-  --backgroundcolour:brown;
-  --colour:brown;
-  --alternativecolour:brown;
+  --backgroundcolour: #FF69B4;
+  --colour: #FF69B4;
+  --alternativecolour: #FF69B4;
 }
 
 body {
-  background-color: var(--backgroundcolour);
 }
 
 h1 {
@@ -34,25 +33,24 @@ a[href^="ftp://"] {
 }
 
 @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  from {
+    opacity: 1;
   }
+  to {
+    opacity: 0;
+  }
+}
 
-  .toolbar-header {
-    border-bottom: 1px solid #c2c0c2;
-  }
-  .toolbar-header .title {
-    margin-top: 1px;
-  }
-
-  .toolbar-footer {
-    border-top: 1px solid #c2c0c2;
-    -webkit-app-region: drag;
-  }
+.toolbar-header {
+  border-bottom: 1px solid #c2c0c2;
+}
+.toolbar-header .title {
+  margin-top: 1px;
+}
+.toolbar-footer {
+  border-top: 1px solid #c2c0c2;
+  -webkit-app-region: drag;
+}
 
 .headerfade {
   -webkit-animation: fadeOut 2s forwards;
@@ -215,7 +213,7 @@ a[href^="ftp://"] {
   overflow-y: auto;
   flex: 1;
   border-left: 1px solid #ddd;
-  background-color: var(--background-colour);
+  color: var(--colour);
 }
 .pane-sm {
   max-width: 220px;
@@ -266,7 +264,6 @@ a[href^="ftp://"] {
 }
 
 .sidebar {
-  background-color: var(--background-colour);
 }
 
 /*PHOTON LIST GROUP */
