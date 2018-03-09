@@ -55,6 +55,7 @@ a[href^="ftp://"] {
 .headerfade {
   -webkit-animation: fadeOut 2s forwards;
   -webkit-animation-delay: 2.25s;
+  padding-top: 1px;
 }
 
 .splashheader {
@@ -156,6 +157,7 @@ a[href^="ftp://"] {
           transition-delay: 20ms;
   background-color: #707070;
   background-size: contain;
+  background-image: url(../src/assets/note.png);
 }
 
 .buttons:not(:last-child):nth-last-child(3) {
