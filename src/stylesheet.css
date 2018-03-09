@@ -2,7 +2,7 @@
 
 /* UI Album Art Palette */
 root: {
-  --backgroundcolour: #FF69B4;
+  --bgcolour: #FF69B4;
   --colour: #FF69B4;
   --alternativecolour: #FF69B4;
 }
@@ -213,7 +213,7 @@ a[href^="ftp://"] {
   overflow-y: auto;
   flex: 1;
   border-left: 1px solid #ddd;
-  color: var(--colour);
+  color: var(--bgcolour);
 }
 .pane-sm {
   max-width: 220px;
