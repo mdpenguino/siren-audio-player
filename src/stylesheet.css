@@ -42,6 +42,18 @@ a[href^="ftp://"] {
     }
   }
 
+  .toolbar-header {
+    border-bottom: 1px solid #c2c0c2;
+  }
+  .toolbar-header .title {
+    margin-top: 1px;
+  }
+
+  .toolbar-footer {
+    border-top: 1px solid #c2c0c2;
+    -webkit-app-region: drag;
+  }
+
 .headerfade {
   -webkit-animation: fadeOut 2s forwards;
   -webkit-animation-delay: 2.25s;
@@ -229,7 +241,7 @@ a[href^="ftp://"] {
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: 'Montserrat', sans-serif;
-  cursor: context-menu;  
+  cursor: context-menu;
 }
 .nav-group-item:active, .nav-group-item.active {
   background-color: #dcdfe1;
