@@ -47,6 +47,36 @@ a[href^="ftp://"] {
 .toolbar-header .title {
   margin-top: 1px;
 }
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.flex-item {
+  background: #46D246;
+  padding: 10px;
+  width: 200px;
+  height: 30px;
+  margin-top: 0px;
+
+  line-height: 30px;
+  color: #000000;
+  text-align: center;
+}
+
+.flex-item.half {
+  flex-basis: 40%;
+}
+
 .toolbar-footer {
   border-top: 1px solid #c2c0c2;
   -webkit-app-region: drag;
