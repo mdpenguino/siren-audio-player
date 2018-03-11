@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&subset=greek');
 
 /* UI Album Art Palette */
-root: {
-  --bgcolour: #FF69B4;
-  --colour: #FF69B4;
-  --alternativecolour: #FF69B4;
-}
+
+
 
 body {
+  --bgcolour: #FF69B4;
+  --colour: fuchsia;
+  --alternativecolour: #FF69B4;
 }
 
 h1 {
@@ -245,7 +245,8 @@ a[href^="ftp://"] {
   overflow-y: auto;
   flex: 1;
   border-left: 1px solid #ddd;
-  color: var(--bgcolour);
+  color: var(--colour);
+  background-color: var(--bgcolour);
 }
 .pane-sm {
   max-width: 220px;
