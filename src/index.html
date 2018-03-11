@@ -1,6 +1,8 @@
 <!doctype html>
   <html>
     <head>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script src="index.js"></script>
       <title>Siren</title>
       <!-- href = ../css/photon.css OR stylesheet.css FOR TESING PURPOSES -->
       <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -9,11 +11,19 @@
       <div class="window">
         <header class="toolbar toolbar-header">
           <ul class="flex-container">
-            <li class="flex-item">1</li>
+            <li class="flex-item">
+              <button id="audioCtrl" onclick="togglePlaying()">Play</button>
+            </li>
             <li class="flex-item half">
               <div class="headerfade">
                 <h1 class="title">Siren</h1>
               </div>
+              <canvas id="progress" width="500" height="5"><canvas>
+              <audio id="audio" ontimeupdate="updateBar()" src="http://k007.kiwi6.com/hotlink/tfaw4el9c5/Moon_River_Jazz.mp3"></audio>
+              <br>
+              <span id="currentTime"></span> /
+              <span id="duration"></span>
+              <button id="audioCtrl" onclick="togglePlaying()">Play</button>
             </li>
             <li class="flex-item">3</li>
         </header>
