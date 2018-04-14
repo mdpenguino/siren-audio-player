@@ -14,3 +14,6 @@ https://github.com/FormidableLabs/image-palette/tree/master/packages/react-image
 
 ## Credits
 - [Photon](http://photonkit.com) by Connor Sears
+- [Music-Metadata](https://github.com/Borewit/music-metadata) by Borewit
+- [Image Palette](https://github.com/FormidableLabs/image-palette) by FormidableLabs
+
